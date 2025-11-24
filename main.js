@@ -4,9 +4,10 @@ let handleId = null;
 let currentRoom = null;
 let pc = null;
 
+const JANUS_URL = "wss://ec2-54-180-104-21.ap-northeast-2.compute.amazonaws.com:8188"
+
 async function loadRooms() {
-  const url = document.getElementById("janusUrl").value;
-  ws = new WebSocket(url);
+  ws = new WebSocket(JANUS_URL);
 
   ws.onopen = () => {
     createSession();
