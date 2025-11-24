@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Janus MCU Voice Chat Test</title>
+  <script src="main.js"></script>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    button { margin: 5px; padding: 8px; }
+    #rooms { margin-top: 20px; }
+  </style>
+</head>
+<body>
+
+<h1>🎤 Janus MCU Voice Chat Test</h1>
+
+<div>
+  <label>Janus WebSocket URL:</label><br/>
+  <input id="janusUrl" value="wss://YOUR_JANUS_DOMAIN/janus" style="width:300px;">
+</div>
+
+<div>
+  <button onclick="loadRooms()">방 목록 불러오기</button>
+</div>
+
+<div id="rooms"></div>
+
+<hr/>
+
+<h2>현재 참여 중인 방</h2>
+<div id="currentRoom">참여 중 아님</div>
+<button onclick="leaveRoom()">방 나가기</button>
+
+</body>
+</html>
